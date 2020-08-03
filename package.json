@@ -14,7 +14,6 @@
         "url": "https://github.com/claimsforce-gmbh/tslint-import-control-rule.git"
     },
     "scripts": {
-        "prebuild": "rm -rf dist/",
         "build": "npx tsc",
         "lint": "npx tslint 'src/**/*.ts' -c tslint.json",
         "lint:fix": "npm run lint -- --fix"
