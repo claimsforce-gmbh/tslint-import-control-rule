@@ -8,7 +8,7 @@ This TSLint rule will help you with that!
 ## Usage
 ### Install from NPM to your Dev Dependencies
 
-```console
+```
 npm install --save-dev tslint-import-control-rule
 ```
 
@@ -17,7 +17,6 @@ To make the rule works as intended you need to configure an `alias` in your `pac
 
 ```json
 {
-    [...]        
     "alias": {
         "src": "./src"
     }
@@ -54,7 +53,7 @@ In your `tslint.json` file, source the rule from this package, e.g.:
 }
 ```
 
-#### Configuration for a clean architecture
+#### Example configuration for a clean architecture
 
 ```json
 {
