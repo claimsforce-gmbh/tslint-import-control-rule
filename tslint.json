@@ -1,0 +1,62 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-eslint-rules"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "node_modules/**"
+        ]
+    },
+    "rules": {
+        "no-any": true,
+        "no-var-keyword": true,
+        "no-unexpected-multiline": true,
+        "typedef": [
+            true,
+            "call-signature",
+            "arrow-call-signature"
+        ],
+        "semicolon": {
+            "options": "always"
+        },
+        "interface-name": false,
+        "object-literal-sort-keys": false,
+        "no-console": false,
+        "ordered-imports": [
+            true,
+            {
+                "grouped-imports": true
+            }
+        ],
+        "no-redundant-jsdoc": true,
+        "quotemark": [
+            true,
+            "single"
+        ],
+        "trailing-comma": false,
+        "only-arrow-functions": true,
+        "object-curly-spacing": true,
+        "no-require-imports": true,
+        "curly": true,
+        "linebreak-style": [
+            true,
+            "LF"
+        ],
+        "max-line-length": [
+            true,
+            120
+        ],
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "no-irregular-whitespace": true,
+        "eofline": true
+    },
+    "rulesDirectory": [
+        "node_modules/tslint-eslint-rules/dist/rules"
+    ]
+}

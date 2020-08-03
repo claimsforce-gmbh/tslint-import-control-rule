@@ -1,0 +1,43 @@
+{
+    "name": "tslint-import-control-rule",
+    "version": "1.0.0",
+    "description": "Control your imports through TSLint",
+    "main": "src/importControlRule.js",
+    "authors": [
+        {
+            "name": "Maik Schmidt",
+            "email": "maik@claimsforce.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/claimsforce-gmbh/tslint-import-control-rule.git"
+    },
+    "scripts": {
+        "prebuild": "rm -rf dist/",
+        "build": "npx tsc",
+        "lint": "npx tslint 'src/**/*.ts' -c tslint.json",
+        "lint:fix": "npm run lint -- --fix"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "npx commitlint -e $HUSKY_GIT_PARAMS",
+            "pre-commit": "npm run lint"
+        }
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@commitlint/cli": "9.1.1",
+        "@commitlint/config-conventional": "9.1.1",
+        "@types/node": "14.0.27",
+        "husky": "4.2.5",
+        "tslint": "6.1.2",
+        "tslint-eslint-rules": "5.4.0",
+        "typescript": "3.9.7"
+    }
+}
