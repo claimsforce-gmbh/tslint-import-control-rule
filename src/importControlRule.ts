@@ -22,7 +22,7 @@ export class Rule extends Lint.Rules.AbstractRule {
 
 const walk = (ctx: Lint.WalkContext<Options>): void => {
     const override = ctx.options.overrides.find((item): boolean => (
-        ctx.sourceFile.fileName.startsWith(item.rootDir)
+        ctx.sourceFile.fileName.includes(item.rootDir)
     ));
     for (const importName of findImports(ctx.sourceFile, ImportKind.All)) {
         const whitelist = override ? [

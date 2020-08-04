@@ -17,7 +17,7 @@ var Rule = (function (_super) {
 }(Lint.Rules.AbstractRule));
 exports.Rule = Rule;
 var walk = function (ctx) {
-    var override = ctx.options.overrides.find(function (item) { return (ctx.sourceFile.fileName.startsWith(item.rootDir)); });
+    var override = ctx.options.overrides.find(function (item) { return (ctx.sourceFile.fileName.includes(item.rootDir)); });
     var _loop_1 = function (importName) {
         var whitelist = override ? tslib_1.__spreadArrays(override.mergeWhitelist === undefined || override.mergeWhitelist ? ctx.options.whitelist : [], override.whitelist) : ctx.options.whitelist;
         var isInsideRootDir = importName.text.startsWith(ctx.options.rootDir);
