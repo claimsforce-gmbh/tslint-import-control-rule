@@ -1,6 +1,6 @@
 {
     "name": "tslint-import-control-rule",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Control your imports through TSLint",
     "main": "src/importControlRule.js",
     "authors": [
