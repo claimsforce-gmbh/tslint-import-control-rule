@@ -4,7 +4,7 @@ import * as ts from 'typescript';
 
 interface Options {
     rootDir: string;
-    whitelist: string[];
+    whitelist?: string[];
     overrides: {
         rootDir: string;
         whitelist: string[];
@@ -26,9 +26,9 @@ const walk = (ctx: Lint.WalkContext<Options>): void => {
     ));
     for (const importName of findImports(ctx.sourceFile, ImportKind.All)) {
         const whitelist = override ? [
-            ...override.mergeWhitelist === undefined || override.mergeWhitelist ? ctx.options.whitelist : [],
+            ...override.mergeWhitelist === undefined || override.mergeWhitelist ? ctx.options.whitelist || [] : [],
             ...override.whitelist
-        ] : ctx.options.whitelist;
+        ] : ctx.options.whitelist || [];
 
         const isInsideRootDir = importName.text.startsWith(ctx.options.rootDir);
         const isRelative = importName.text.startsWith('.');
