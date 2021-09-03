@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This is no longer supported. Consider using [dependency-cruiser](https://github.com/sverweij/dependency-cruiser) instead.
+
 # Control your imports through TSLint
 You want full control of your imports?
 Not each file is allowed to import another file from a different folder?
